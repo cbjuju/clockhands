@@ -11,8 +11,13 @@ while current_time < total_time:
 
     for event in pygame.event.get():
 
-        if event.type == pygame.QUIT:
-            exit()
+        if event.type == pygame.QUIT: exit()
+
+    screen.fill((0, 0, 0))
+
+    pygame.draw.line(screen, (255, 255, 255), (0, 0), (50, 50))
+
+    pygame.display.update()
 
     current_time += time_step
     time.sleep(0.1)
